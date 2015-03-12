@@ -31,8 +31,34 @@ trait Trait_Filters {
         $best  = "(ftp|https?):\/\/(\w+:?\w*@)?(\S+)(:[0-9]+)?(\/([\w#!:.?+=&%@!\/-])?)?";
 
         $filters = [
-            "/$big/i", "/$small/i", "/$other/i",
+            /*"/$big/i",*/ "/$small/i", /*"/$other/i",*/
             "/$best/i",
+        ];
+
+        $string = preg_replace($filters, $with, $string);
+
+        return $string;
+    }
+
+    public function filterEmail($string, $with) {
+
+        $pattern = "[^@\s]*@[^@\s]*\.[^@\s]*";
+
+        $filters = [
+            "/$pattern/i",
+        ];
+
+        $string = preg_replace($filters, $with, $string);
+
+        return $string;
+    }
+
+    public function filterPhones($string, $with) {
+
+        $pattern = "\+?[0-9][0-9()-\s+]{4,20}[0-9]";
+
+        $filters = [
+            "/$pattern/i",
         ];
 
         $string = preg_replace($filters, $with, $string);
