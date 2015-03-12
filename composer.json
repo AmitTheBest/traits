@@ -1,0 +1,22 @@
+{
+    "name": "atk4/traits",
+    "type": "library",
+    "version": "4.3.x",
+    "description": "PHP helper traits",
+    "keywords": ["addon"],
+    "authors": [
+        {
+            "name": "Vadym Radvansky"
+        },
+        {
+            "name": "Konstantin Kolodnitsky"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3"
+    },
+
+    "autoload": {
+        "psr-0": {"atk4\\traits": "lib/"}
+    }
+}
