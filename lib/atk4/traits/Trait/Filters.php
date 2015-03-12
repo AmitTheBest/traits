@@ -5,6 +5,9 @@
  * Date: 20.01.15
  * Time: 14:41
  */
+
+namespace atk4\traits;
+
 trait Trait_Filters {
 
 
